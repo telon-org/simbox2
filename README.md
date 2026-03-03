@@ -1,10 +1,33 @@
-# chan_dongle - Asterisk Channel Driver for Huawei UMTS Dongles
+# chan_svistok - Asterisk Channel Driver for Huawei UMTS Dongles
 
 [🇷🇺 Русский](README_ru.md) | [🇬🇧 English](README.md)
 
 ## Overview
 
-**chan_dongle** is an Asterisk PBX channel driver that enables Huawei UMTS 3G dongles to function as telephony channels, supporting voice calls, SMS, and USSD operations.
+**chan_svistok** is a fork of the chan_dongle Asterisk PBX channel driver, enhanced by **Anton Dodonov** and the **Native Mind** team. It enables Huawei UMTS 3G dongles to function as telephony channels, supporting voice calls, SMS, and USSD operations.
+
+### What's New in chan_svistok
+
+Compared to the original chan_dongle, chan_svistok includes the following enhancements:
+
+| Feature | chan_dongle | chan_svistok |
+|---------|-------------|--------------|
+| State persistence | Limited | Extended file-based storage |
+| CLI commands | Basic | 23 commands with tab completion |
+| Firmware flashing | External tools | Built-in Qualcomm DIAG programmer |
+| Device limits | No | Per-device call/balance limits |
+| Balance tracking | Manual | Automatic with ballast support |
+| Group management | Basic | IMSI-based group assignment |
+| Documentation | Minimal | Full SDD flows + ADRs |
+| Call statistics | Basic | Extended with ACD calculation |
+| Error handling | Standard | Enhanced with persistence |
+| Logging | Standard | Extended with per-device logs |
+
+### Original Project
+
+This project is based on **chan_dongle** by Artem Makhutov, Dmitry Vagin, and bg <bg_one@mail.ru>.
+
+**Original Project Home**: http://code.google.com/p/asterisk-chan-dongle/
 
 ## Features
 
@@ -240,6 +263,11 @@ GNU General Public License Version 2. See [LICENSE.txt](chan_svistok/LICENSE.txt
 
 ## Credits
 
+### chan_svistok Development
+- **Lead Developer**: Anton Dodonov
+- **Company**: [Native Mind](https://nativemind.net)
+
+### Original chan_dongle Authors
 - **Original Authors**: Artem Makhutov, Dmitry Vagin
 - **Maintainer**: bg <bg_one@mail.ru>
 - **Project Home**: http://code.google.com/p/asterisk-chan-dongle/
