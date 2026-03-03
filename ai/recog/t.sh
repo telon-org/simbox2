@@ -1,1 +1,0 @@
-sox test.wav out.wav silence 1 0.3 1% 1 0.4 1% : newfile : restart
